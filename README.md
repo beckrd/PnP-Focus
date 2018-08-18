@@ -3,6 +3,13 @@ Simplest Arduino-based focus controller
 
 I want to share with you the Arduino-based focus controller named "PnP Focus". As the name implies, I want it to be as easy as "Plug and Play". No soldering. No hassle with firmware upload.
 You simply 1) buy the readily available components, 2) stack them, and 3) upload the firmware by a single click. 
+
+***************
+Added by RDBeck
+My PG27 motor has significant backlash and the code as proviced by aruangra does not provide for backlash compensation.
+This fork adds backlash compensation which assumes inward focusing to keep the gears engaged.  The backlash parameter can 
+be set by changing the value at line 92 (long Backlash = 24;  //change this line for different backlash).
+*************** 
  
 Features:
 - Manual control
@@ -29,9 +36,9 @@ Components required:
 The total cost is less than $30.
  
 Installation:
-1) Visit https://github.com/aruangra/PnP-Focus , download the file "upload.zip" and unzip the file.
+1) Visit https://github.com/aruangra/PnP-Focus , download the files and open in the Arduino IDE (downloadable from https://www.arduino.cc/en/Main/Software) or use the web IDE at the same location.
 2) Then connect the micro usb cable between Arduino Leonardo and your PC.
-3) Double click the file "upload.exe". The firmware will be uploaded to the Arduino board. And it is ready. 
+3) Go to the Sketch/Upload menu item. The firmware will be uploaded to the Arduino board, and it is ready for use. 
  
 How to use:
 - You can use the ASCOM Moonlite focuser driver to control the motor.
@@ -44,4 +51,4 @@ DOWN: Fast/Slow movement
  
 Let me know if you have any question. Thank you.
 
-Anat
+Anat / RD Beck
